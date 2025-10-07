@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sekolah Keren Abis</title>
+  <title>👑Smk islam Malahayati 👑</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -95,6 +95,33 @@
       color: var(--primary);
       margin-bottom: 20px;
     }
+    ul {
+      padding-left: 20px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+    }
+    form button {
+      background-color: var(--primary);
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    form button:hover {
+      background-color: var(--secondary);
+    }
+    #status {
+      margin-top: 15px;
+      font-weight: bold;
+    }
     footer {
       background-color: var(--primary);
       color: white;
@@ -114,6 +141,7 @@
   <nav>
     <a href="#tentang">Tentang</a>
     <a href="#program">Program</a>
+    <a href="#daftar">Daftar</a>
     <a href="#kontak">Kontak</a>
   </nav>
 
@@ -137,6 +165,20 @@
     </div>
   </section>
 
+  <section id="daftar">
+    <div class="card">
+      <h2>Formulir Pendaftaran</h2>
+      <form onsubmit="return kirimFormulir()">
+        <input type="text" id="nama" placeholder="Nama Lengkap" required>
+        <input type="email" id="email" placeholder="Email Aktif" required>
+        <input type="text" id="kelas" placeholder="Kelas yang Dituju (misal: 10 IPA)" required>
+        <textarea id="pesan" rows="4" placeholder="Pesan atau pertanyaan..."></textarea>
+        <button type="submit">Daftar Sekarang</button>
+      </form>
+      <p id="status"></p>
+    </div>
+  </section>
+
   <section id="kontak">
     <div class="card">
       <h2>Hubungi Kami</h2>
@@ -154,7 +196,21 @@
     function toggleDark() {
       document.body.classList.toggle('dark');
     }
+
+    function kirimFormulir() {
+      const nama = document.getElementById("nama").value;
+      const email = document.getElementById("email").value;
+      const kelas = document.getElementById("kelas").value;
+      const pesan = document.getElementById("pesan").value;
+
+      document.getElementById("status").innerText =
+        `Terima kasih, ${nama}! Pendaftaran untuk kelas ${kelas} telah diterima.`;
+
+      document.querySelector("form").reset();
+      return false;
+    }
   </script>
 
 </body>
 </html>
+  
