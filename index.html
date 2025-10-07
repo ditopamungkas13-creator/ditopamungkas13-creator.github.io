@@ -38,4 +38,123 @@
       position: relative;
     }
     header h1 {
-      
+      font-size: 2.8em;
+      animation: gambang 1.5s infinite alternate ease-in-out;
+    }
+    @keyframes gambang {
+      0% { transform: rotate(-2deg); }
+      100% { transform: rotate(2deg); }
+    }
+    .toggle {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      background: white;
+      color: var(--primary);
+      border: none;
+      padding: 10px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    nav {
+      background-color: var(--card);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      padding: 15px 25px;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+    }
+    nav a:hover {
+      color: var(--secondary);
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background-color: var(--card);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h2 {
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    footer {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sekolah Keren Abis</h1>
+    <p>Tempat Belajar yang Bikin Kamu Hebat</p>
+    <button class="toggle" onclick="toggleDark()">🌗 Mode</button>
+  </header>
+
+  <nav>
+    <a href="#tentang">Tentang</a>
+    <a href="#program">Program</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <section id="tentang">
+    <div class="card">
+      <h2>Tentang Sekolah</h2>
+      <p>Sekolah Keren Abis adalah tempat belajar yang menggabungkan teknologi, seni, dan budaya lokal. Kami percaya bahwa pendidikan harus menyenangkan, relevan, dan membentuk karakter unggul. Dari coding sampai musik gambang kromong, semua ada di sini!</p>
+    </div>
+  </section>
+
+  <section id="program">
+    <div class="card">
+      <h2>Program Unggulan</h2>
+      <ul>
+        <li>🎓 Kelas Kreatif & Digital</li>
+        <li>🎮 Game Development & Coding</li>
+        <li>🎭 Seni Pertunjukan & Musik Tradisional</li>
+        <li>🌱 Eco School & Urban Farming</li>
+        <li>🌐 Bahasa Asing & Budaya Global</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="kontak">
+    <div class="card">
+      <h2>Hubungi Kami</h2>
+      <p>Email: kerenabis@sekolah.id</p>
+      <p>Instagram: @sekolahkerenabis</p>
+      <p>Alamat: Jl. Gambang No. 88, Jakarta Timur</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sekolah Keren Abis. Dibuat dengan semangat dan irama gambang.</p>
+  </footer>
+
+  <script>
+    function toggleDark() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+
+</body>
+</html>
