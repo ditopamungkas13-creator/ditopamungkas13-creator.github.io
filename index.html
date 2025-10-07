@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sekolah Digital Nusantara</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>Sekolah Keren Abis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #16a085;
-      --secondary: #1abc9c;
       --bg: #f0f2f5;
       --text: #333;
       --card: #fff;
+      --primary: #ff6f00;
+      --secondary: #ffb74d;
     }
     body.dark {
       --bg: #1e1e1e;
@@ -31,153 +31,11 @@
       transition: background 0.3s, color 0.3s;
     }
     header {
-      background: linear-gradient(135deg, var(--secondary), var(--primary));
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: white;
       padding: 60px 20px;
       text-align: center;
+      position: relative;
     }
-    nav {
-      background-color: var(--card);
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      display: flex;
-      justify-content: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav a {
-      padding: 15px 25px;
-      text-decoration: none;
-      color: var(--primary);
-      font-weight: 600;
-    }
-    nav a:hover {
-      color: var(--secondary);
-    }
-    .toggle {
-      position: absolute;
-      right: 20px;
-      top: 20px;
-      background: white;
-      border: none;
-      padding: 10px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .card {
-      background-color: var(--card);
-      border-radius: 12px;
-      padding: 30px;
-      margin-bottom: 40px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card h2 {
-      color: var(--primary);
-      margin-bottom: 20px;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-family: 'Poppins', sans-serif;
-    }
-    form button {
-      background-color: var(--primary);
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    form button:hover {
-      background-color: var(--secondary);
-    }
-    footer {
-      background-color: var(--primary);
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>Sekolah Digital Nusantara</h1>
-    <p>Belajar Cerdas, Berkarya Hebat</p>
-    <button class="toggle" onclick="toggleDark()">🌙 Mode</button>
-  </header>
-
-  <nav>
-    <a href="#tentang">Tentang</a>
-    <a href="#program">Program</a>
-    <a href="#daftar">Daftar</a>
-    <a href="#kontak">Kontak</a>
-  </nav>
-
-  <section id="tentang">
-    <div class="card">
-      <h2>Tentang Kami</h2>
-      <p>Sekolah Digital Nusantara adalah sekolah masa depan yang mengintegrasikan teknologi, kreativitas, dan pembelajaran berbasis proyek. Kami percaya bahwa pendidikan harus relevan, menyenangkan, dan membentuk karakter unggul.</p>
-    </div>
-  </section>
-
-  <section id="program">
-    <div class="card">
-      <h2>Program Unggulan</h2>
-      <ul>
-        <li>Pembelajaran STEAM (Science, Technology, Engineering, Arts, Math)</li>
-        <li>Kelas Coding dan Robotik</li>
-        <li>Digital Entrepreneurship</li>
-        <li>Virtual Reality & Augmented Reality Lab</li>
-        <li>Ekstrakurikuler Kreatif: Podcast, Film, Desain Grafis</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="daftar">
-    <div class="card">
-      <h2>Formulir Pendaftaran</h2>
-      <form>
-        <input type="text" placeholder="Nama Lengkap" required>
-        <input type="email" placeholder="Email" required>
-        <textarea rows="4" placeholder="Pesan atau pertanyaan..."></textarea>
-        <button type="submit">Kirim</button>
-      </form>
-    </div>
-  </section>
-
-  <section id="kontak">
-    <div class="card">
-      <h2>Hubungi Kami</h2>
-      <p>Email: halo@sekolahdigital.id</p>
-      <p>WhatsApp: +62 812-3456-7890</p>
-      <p>Alamat: Jl. Inovasi No. 88, Jakarta Selatan</p>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Sekolah Digital Nusantara. Dibuat dengan semangat inovasi.</p>
-  </footer>
-
-  <script>
-    function toggleDark() {
-      document.body.classList.toggle('dark');
-    }
-  </script>
-
-</body>
-</html>
+    header h1 {
+      
